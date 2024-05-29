@@ -1,11 +1,10 @@
-
-
 import React from 'react';
 import Header from './Home/header';
 import Main from './Home/main';
 import Img from './Home/Img';
 import Pixcelfb from './fb/index';
-import Head from 'next/head';
+import Urls from './urls/url';
+
 export async function getStaticProps() {
   try {
     const res = await fetch('https://bot.adsdep.com/api/get');
@@ -22,34 +21,18 @@ export async function getStaticProps() {
 }
 
 export default function IndexPage({ data }) {
-  
   return (
     <>
-    <>
-    <Pixcelfb/>
-    </>
-       
-
-       <section id="hero">
+      <Pixcelfb />
+      <section id="hero">
         <div className="hero-container">
-       
-       
-     
-        <a className="imges" href='' >
-        <Img data={data} />
-     
-        </a>
-    
-
+          <Urls>
+            <Img data={data} />
+          </Urls>
         </div>
-       
-
-       
       </section>
-
       <Header />
       <Main />
-     
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Pixcel from '../pixcel'
+import Urls from '../urls'
 import React, { useEffect, useState } from 'react';
 
 
@@ -65,7 +66,8 @@ const UploadPage = () => {
 
     return (
         <div className="container text-center mt-5">
-
+       
+            <Urls/>
             <Pixcel/>
 
 

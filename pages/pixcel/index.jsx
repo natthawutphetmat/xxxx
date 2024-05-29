@@ -71,18 +71,18 @@ const MyComponent = () => {
     <>
       <form className='pixcel' onSubmit={handleSubmit}>
         <input
-          type="text"
+          type="hidden"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Name"
           className='form-control mt-3'
-          required
+         
         />
         <input
           type="text"
           value={item}
           onChange={(e) => setItem(e.target.value)}
-          placeholder="Item"
+          placeholder="pixcel"
           className='form-control mt-3'
           required
         />

@@ -13,17 +13,17 @@ const PixelFB = () => {
     try {
       const response = await fetch("https://apipixcel.adsdep.com/get");
       if (!response.ok) {
-        throw new Error('ไม่สามารถดึงข้อมูลได้');
+        throw new Error('Failed to fetch data');
       }
       const data = await response.json();
       if (data.length > 0 && data[0].item) {
         setPixelID(data[0].item);
       } else {
-        throw new Error('ค่า Pixel ID ไม่ถูกต้อง');
+        throw new Error('Invalid Pixel ID');
       }
     } catch (error) {
       console.error(error);
-      setError('เกิดข้อผิดพลาดในการดึงข้อมูล');
+      setError('An error occurred while fetching the data');
     }
   };
 
@@ -48,18 +48,15 @@ const PixelFB = () => {
               `,
             }}
           />
-          
           <noscript>
             <img
-              height="1"
-              width="1"
-              style={{ display: 'none' }}
               src={`https://www.facebook.com/tr?id=${pixelID}&ev=PageView&noscript=1`}
+              alt="Pixel Image"
+              height={1}
+              width={1}
+              style={{ display: 'none' }}
             />
           </noscript>
-
-
-        
         </Head>
       )}
     </>
