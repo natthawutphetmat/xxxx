@@ -26,10 +26,14 @@ export default function IndexPage({ data }) {
       <Pixcelfb />
       <section id="hero">
         <div className="hero-container">
+
+        <div className="imges"> 
           <Urls>
-            <Img data={data} />
+            
+            <Img data={data} className="img" />
+         
           </Urls>
-        </div>
+        </div>   </div>
       </section>
       <Header />
       <Main />

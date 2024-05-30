@@ -43,3 +43,13 @@
   border-radius: 20px;
   overflow: scroll;
 }
+
+.imge {
+ max-width: 600px;
+    overflow: auto;
+    cursor: default; 
+
+}
+.box img {
+  width: 100%;
+}
