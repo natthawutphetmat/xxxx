@@ -2,8 +2,8 @@ import React from 'react';
 import Header from './Home/header';
 import Main from './Home/main';
 import Img from './Home/Img';
-import Pixcelfb from './fb/index';
 import Urls from './urls/url';
+
 
 export async function getStaticProps() {
   try {
@@ -21,9 +21,11 @@ export async function getStaticProps() {
 }
 
 export default function IndexPage({ data }) {
+ 
   return (
     <>
-      <Pixcelfb />
+ 
+  
       <section id="hero">
         <div className="hero-container">
 
